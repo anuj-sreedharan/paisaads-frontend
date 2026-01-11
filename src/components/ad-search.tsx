@@ -90,7 +90,6 @@ export function SearchFilterSection() {
     <Card className="mb-6">
       <div className="p-4 space-y-6">
         <div className="space-y-4">
-          {}
           <div className="space-y-2">
             <Label htmlFor="search">Search</Label>
             <div className="relative">
@@ -106,7 +105,6 @@ export function SearchFilterSection() {
             </div>
           </div>
 
-          {}
           <div className="space-y-2">
             <Label>Categories</Label>
             {categoriesLoading ? (
@@ -143,11 +141,9 @@ export function SearchFilterSection() {
             )}
           </div>
 
-          {}
           <div className="space-y-4">
             <Label>Location</Label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {}
               <div className="space-y-2">
                 <Label className="text-sm font-medium">State</Label>
                 <StateSelect
@@ -159,13 +155,12 @@ export function SearchFilterSection() {
                 />
               </div>
 
-              {}
               <div className="space-y-2">
                 <Label className="text-sm font-medium">City</Label>
                 <CitySelect
                   countryid={countryId}
 
-                  stateid={stateId || undefined}
+                  stateid={stateId ?? 0}
                   onChange={handleCitySelect}
                   placeHolder="Select City"
                   containerClassName="w-full"
@@ -177,7 +172,6 @@ export function SearchFilterSection() {
           </div>
         </div>
 
-        {}
         <div className="flex flex-col sm:flex-row gap-2 pt-2">
           <Button className="flex-1" onClick={handleSearch}>
             <Search className="mr-2 h-4 w-4" />

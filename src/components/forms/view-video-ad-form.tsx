@@ -71,7 +71,6 @@ export function ViewVideoAdForm({ adId }: { adId: string }) {
 
   return (
     <div className="space-y-4">
-      {}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Button
@@ -88,10 +87,8 @@ export function ViewVideoAdForm({ adId }: { adId: string }) {
         </div>
       </div>
 
-      {}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-2 space-y-4">
-          {}
           <Card className="p-6 border rounded-md">
             <div className="space-y-2">
               <div className="flex justify-between items-start">
@@ -99,7 +96,7 @@ export function ViewVideoAdForm({ adId }: { adId: string }) {
                 {ad.status && (
                   <Badge
 
-                    variant={getStatusVariant(ad.status)}
+                    variant={getStatusVariant(ad.status) as any}
                     className="uppercase"
                   >
                     {ad.status === "FOR_REVIEW"
@@ -161,9 +158,7 @@ export function ViewVideoAdForm({ adId }: { adId: string }) {
           </Card>
         </div>
 
-        {}
         <div className="space-y-4">
-          {}
           <Card className="p-6 border rounded-md">
             <div className="space-y-4">
               <div className="flex items-center">
@@ -226,7 +221,6 @@ export function ViewVideoAdForm({ adId }: { adId: string }) {
             </div>
           </Card>
 
-          {}
           {ad.payment && (
             <Card className="p-6 border rounded-md">
               <div className="space-y-4">

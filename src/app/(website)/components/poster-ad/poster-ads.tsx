@@ -65,13 +65,11 @@ export default function PosterAds({ children }: { children: React.ReactNode }) {
 
   return (
     <div>
-      {}
       {topAds.length > 0 && (
         <div className=" w-full">
           <PosterAdCarousel ads={topAds} maxAds={maxAdsPerCarousel} />
         </div>
       )}
-      {}
       {children}
       {}{" "}
       {bottomAds.length > 0 && (

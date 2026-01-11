@@ -78,15 +78,12 @@ export function PaymentDialog({ adId, type }: PaymentDialogProps) {
 
   const { mutate: submitPayment, isPending: isSubmitting } = useMutation({
     mutationFn: async (data: PaymentFormValues) => {
-      const adInfo = {};
+      const adInfo: Record<string, string> = {};
       if (type === AdType.LINE) {
-
         adInfo.lineAdId = adId;
       } else if (type === AdType.POSTER) {
-
         adInfo.posterAdId = adId;
       } else if (type === AdType.VIDEO) {
-
         adInfo.videoAdId = adId;
       }
       const response = await api.post("/payment", {
@@ -171,7 +168,6 @@ export function PaymentDialog({ adId, type }: PaymentDialogProps) {
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-4 py-4"
           >
-            {}
             <FormField
               control={form.control}
               name="method"
@@ -200,7 +196,6 @@ export function PaymentDialog({ adId, type }: PaymentDialogProps) {
               )}
             />
 
-            {}
             <FormField
               control={form.control}
               name="amount"
@@ -218,7 +213,6 @@ export function PaymentDialog({ adId, type }: PaymentDialogProps) {
               )}
             />
 
-            {}
             <FormField
               control={form.control}
               name="details"
@@ -237,7 +231,6 @@ export function PaymentDialog({ adId, type }: PaymentDialogProps) {
               )}
             />
 
-            {}
             <FormField
               control={form.control}
               name="proofImageId"

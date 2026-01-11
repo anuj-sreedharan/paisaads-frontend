@@ -111,7 +111,6 @@ export default function SearchResultsPage() {
 
     return (
       <div className="col-span-8 flex flex-col gap-5">
-        {}
         {tads && tads.length > 0 && (
           <div className="aspect-video overflow-hidden h-72 relative select-none">
             {currentTopAdIndex > 0 && (
@@ -149,15 +148,12 @@ export default function SearchResultsPage() {
           </div>
         )}
 
-        {}
         <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-3">
           <QuickSearchBar />
         </div>
 
-        {}
         <LineAdsWithPagination />
 
-        {}
         {bads && bads.length > 0 && (
           <div className="aspect-video overflow-hidden h-72 relative select-none">
             {currentBottomAdIndex > 0 && (
@@ -210,7 +206,6 @@ export default function SearchResultsPage() {
         />
       </div>
       
-      {}
       <CenterContentWithSearch />
 
       <div className="col-span-2">

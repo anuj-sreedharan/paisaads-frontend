@@ -40,7 +40,6 @@ const ImageGallery = ({
             loading="lazy"
           />
 
-          {}
           {images.length > 1 && (
             <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
               {currentIndex + 1}/{images.length}
@@ -48,7 +47,6 @@ const ImageGallery = ({
           )}
         </div>
 
-        {}
         {images.length > 1 && (
           <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-1 p-2 bg-gradient-to-t from-black/50 to-transparent">
             {images.map((_, idx) => (
@@ -71,7 +69,6 @@ const ImageGallery = ({
         )}
       </div>
 
-      {}
       <Dialog open={showLightbox} onOpenChange={setShowLightbox}>
         <DialogContent className="max-w-4xl p-0 bg-black border-none">
           <div className="relative">
@@ -237,7 +234,6 @@ export default function LineAdsWithPagination() {
   return (
     <div className="flex-1">
       <div className="py-4">
-        {}
         {data && (
           <div className="mb-4 text-sm text-gray-600">
             {data.length > 0 ? (
@@ -286,10 +282,8 @@ export default function LineAdsWithPagination() {
               ))}
             </div>
 
-            {}
             {totalPages > 1 && (
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
-                {}
                 <Button
                   variant="outline"
                   size="sm"
@@ -301,7 +295,6 @@ export default function LineAdsWithPagination() {
                   Previous
                 </Button>
 
-                {}
                 <div className="flex items-center gap-1">
                   {getPaginationNumbers().map((pageNum, index) => (
                     <div key={index}>
@@ -321,7 +314,6 @@ export default function LineAdsWithPagination() {
                   ))}
                 </div>
 
-                {}
                 <Button
                   variant="outline"
                   size="sm"

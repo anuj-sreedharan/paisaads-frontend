@@ -45,7 +45,6 @@ export default function TermsAndConditionsPage() {
   return (
     <div className="pt-20 px-4 pb-12">
       <div className="max-w-4xl mx-auto">
-        {}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <ScrollText className="h-8 w-8 text-blue-600" />
@@ -58,7 +57,6 @@ export default function TermsAndConditionsPage() {
           </p>
         </div>
 
-        {}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {termsData.version && (
             <Card>
@@ -107,7 +105,6 @@ export default function TermsAndConditionsPage() {
           )}
         </div>
 
-        {}
         <Card className="mb-8">
           <CardContent className="pt-6">
             {termsData.content ? (
@@ -124,7 +121,6 @@ export default function TermsAndConditionsPage() {
           </CardContent>
         </Card>
 
-        {}
         <Card className="bg-gray-50">
           <CardContent className="pt-6">
             <div className="text-center">

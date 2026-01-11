@@ -27,7 +27,6 @@ export function PosterAdCard({ ad, className }: PosterAdCardProps) {
         className
       )}
     >
-      {}
       <div className="relative h-52 w-full overflow-hidden">
         <Zoom>
           <Image
@@ -39,7 +38,6 @@ export function PosterAdCard({ ad, className }: PosterAdCardProps) {
           />
         </Zoom>
 
-        {}
         {location && (
           <div className="absolute right-2 top-2 rounded bg-black/70 px-2 py-1 text-xs text-white">
             {location}
@@ -47,7 +45,6 @@ export function PosterAdCard({ ad, className }: PosterAdCardProps) {
         )}
       </div>
 
-      {}
       <div className="absolute bottom-0 left-0 right-0 flex flex-wrap gap-1 p-2">
         {mainCategory && (
           <span

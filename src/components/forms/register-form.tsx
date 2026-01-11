@@ -155,7 +155,6 @@ export default function RegisterForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {}
           <div className="space-y-4">
             <FormField
               control={form.control}
@@ -266,7 +265,6 @@ export default function RegisterForm() {
                           Female
                         </FormLabel>
                       </FormItem>
-                      {}
                     </RadioGroup>
                   </FormControl>
                   <FormMessage />
@@ -275,7 +273,6 @@ export default function RegisterForm() {
             />
           </div>
 
-          {}
           <div className="space-y-4">
             <FormField
               control={form.control}

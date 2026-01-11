@@ -232,7 +232,6 @@ export default function AdSlotsOverviewPage() {
 
   return (
     <div className="pt-4 px-4 md:pt-5 md:px-10">
-      {}
       {slotsData && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-6 md:mb-8">
           <Card>
@@ -281,7 +280,6 @@ export default function AdSlotsOverviewPage() {
         </div>
       )}
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5 mb-4 md:mb-6">
         <div>
           <div className="flex items-center space-x-2 mb-2">
@@ -365,7 +363,6 @@ export default function AdSlotsOverviewPage() {
               <SelectValue placeholder="All Categories" />
             </SelectTrigger>
             <SelectContent>
-              {}
               {availableCategories.map((category) => (
                 <SelectItem key={category.id} value={category.id}>
                   {category.name}
@@ -376,9 +373,7 @@ export default function AdSlotsOverviewPage() {
         </div>
       </div>
 
-      {}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-5">
-        {}
         <div className="xl:col-span-2">
           <Card>
             <CardHeader className="p-4 md:p-6">
@@ -449,7 +444,6 @@ export default function AdSlotsOverviewPage() {
 
                             {slot.categories && slot.categories.length > 0 && (
                               <div className="flex flex-wrap gap-1">
-                                {}
                                 <div className="sm:hidden flex flex-wrap gap-1">
                                   {slot.categories.slice(0, 1).map((cat) => (
                                     <Badge
@@ -467,7 +461,6 @@ export default function AdSlotsOverviewPage() {
                                     </Badge>
                                   )}
                                 </div>
-                                {}
                                 <div className="hidden sm:flex flex-wrap gap-1">
                                   {slot.categories.slice(0, 2).map((cat) => (
                                     <Badge
@@ -526,7 +519,6 @@ export default function AdSlotsOverviewPage() {
           </Card>
         </div>
 
-        {}
         <div className="xl:col-span-1">
           <Card>
             <CardHeader className="p-4 md:p-6">
@@ -597,7 +589,6 @@ export default function AdSlotsOverviewPage() {
         </div>
       </div>
 
-      {}
       <Dialog open={slotDetailsOpen} onOpenChange={setSlotDetailsOpen}>
         <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto mx-4 md:mx-auto">
           <DialogHeader>
@@ -655,7 +646,6 @@ export default function AdSlotsOverviewPage() {
                     {slotDetails.ads.map((ad, index) => (
                       <Card key={`${ad.id}-${index}`}>
                         <CardContent className="p-3 md:p-4">
-                          {}
                           <div className="md:hidden space-y-2">
                             <div className="font-medium text-sm">{ad.title}</div>
                             <div className="flex items-center gap-2 flex-wrap">
@@ -680,7 +670,6 @@ export default function AdSlotsOverviewPage() {
                             </div>
                           </div>
                           
-                          {}
                           <div className="hidden md:grid grid-cols-5 gap-4 items-center">
                             <div className="col-span-2">
                               <span className="font-medium">{ad.title}</span>
@@ -735,7 +724,6 @@ export default function AdSlotsOverviewPage() {
 function AdSlotsOverviewSkeleton() {
   return (
     <div className="pt-4 px-4 md:pt-5 md:px-10">
-      {}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-6 md:mb-8">
         {Array.from({ length: 3 }).map((_, i) => (
           <Card key={i}>
@@ -752,7 +740,6 @@ function AdSlotsOverviewSkeleton() {
         ))}
       </div>
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-5 mb-4 md:mb-6">
         {Array.from({ length: 3 }).map((_, i) => (
           <div key={i}>
@@ -762,7 +749,6 @@ function AdSlotsOverviewSkeleton() {
         ))}
       </div>
 
-      {}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 md:gap-5">
         <div className="xl:col-span-2">
           <Card>

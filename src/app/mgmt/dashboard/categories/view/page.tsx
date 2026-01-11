@@ -143,7 +143,6 @@ export default function CategoriesPage() {
         </CardContent>
       </Card>
 
-      {}
       <CategoryFormDialog
         open={addMainDialogOpen}
         onOpenChange={setAddMainDialogOpen}
@@ -344,7 +343,6 @@ function CategoryItem({
         </div>
       )}
 
-      {}
       <CategoryFormDialog
         open={editDialogOpen}
         onOpenChange={setEditDialogOpen}
@@ -362,7 +360,6 @@ function CategoryItem({
         isLoading={updateMainCategory.isPending}
       />
 
-      {}
       <DeleteCategoryDialog
         open={deleteDialogOpen}
         onOpenChange={setDeleteDialogOpen}
@@ -371,7 +368,6 @@ function CategoryItem({
         isLoading={deleteMainCategory.isPending}
       />
 
-      {}
       <CategoryFormDialog
         open={addSubDialogOpen}
         onOpenChange={setAddSubDialogOpen}
@@ -564,7 +560,6 @@ function SubCategoryItem({
         </div>
       )}
 
-      {}
       <CategoryFormDialog
         open={editDialogOpen}
         onOpenChange={setEditDialogOpen}
@@ -580,7 +575,6 @@ function SubCategoryItem({
         isLoading={updateLevelOneCategory.isPending}
       />
 
-      {}
       <DeleteCategoryDialog
         open={deleteDialogOpen}
         onOpenChange={setDeleteDialogOpen}
@@ -589,7 +583,6 @@ function SubCategoryItem({
         isLoading={deleteLevelOneCategory.isPending}
       />
 
-      {}
       <CategoryFormDialog
         open={addSubDialogOpen}
         onOpenChange={setAddSubDialogOpen}
@@ -782,7 +775,6 @@ function ThirdLevelCategoryItem({
         </div>
       )}
 
-      {}
       <CategoryFormDialog
         open={editDialogOpen}
         onOpenChange={setEditDialogOpen}
@@ -798,7 +790,6 @@ function ThirdLevelCategoryItem({
         isLoading={updateLevelTwoCategory.isPending}
       />
 
-      {}
       <DeleteCategoryDialog
         open={deleteDialogOpen}
         onOpenChange={setDeleteDialogOpen}
@@ -807,7 +798,6 @@ function ThirdLevelCategoryItem({
         isLoading={deleteLevelTwoCategory.isPending}
       />
 
-      {}
       <CategoryFormDialog
         open={addSubDialogOpen}
         onOpenChange={setAddSubDialogOpen}
@@ -968,7 +958,6 @@ function FourthLevelCategoryItem({
         </DropdownMenuContent>
       </DropdownMenu>
 
-      {}
       <CategoryFormDialog
         open={editDialogOpen}
         onOpenChange={setEditDialogOpen}
@@ -984,7 +973,6 @@ function FourthLevelCategoryItem({
         isLoading={updateLevelThreeCategory.isPending}
       />
 
-      {}
       <DeleteCategoryDialog
         open={deleteDialogOpen}
         onOpenChange={setDeleteDialogOpen}

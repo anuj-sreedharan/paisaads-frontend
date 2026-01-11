@@ -130,23 +130,18 @@ export default function SearchPage() {
   return (
     <div className="pt-20 flex flex-col items-center justify-center px-4">
       <div className="text-center max-w-4xl mx-auto">
-        {}
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
           {sloganData?.primarySlogan || "Find What You Need"}
         </h1>
 
-        {}
         <p className="text-lg md:text-xl text-gray-600 mb-12">
           {sloganData?.secondarySlogan || "Search through thousands of classified advertisements"}
         </p>
 
-        {}
         <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 max-w-5xl mx-auto">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-              {}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-end">
-                {}
                 <FormField
                   control={form.control}
                   name="categoryId"
@@ -183,7 +178,6 @@ export default function SearchPage() {
                         <CountrySelect
                           id="101"
 
-                          defaultValue={101}
                           onChange={(countryObj: any) => {
                             field.onChange(countryObj.id);
                             setCountryId(countryObj.id);
@@ -199,7 +193,6 @@ export default function SearchPage() {
                   )}
                 />
 
-                {}
                 <FormField
                   control={form.control}
                   name="stateId"
@@ -216,15 +209,12 @@ export default function SearchPage() {
                           containerClassName="w-full"
                           inputClassName="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                           value={field.value || undefined}
-
-                          defaultValue={stateId}
                         />
                       </FormControl>
                     </FormItem>
                   )}
                 />
 
-                {}
                 <FormField
                   control={form.control}
                   name="cityId"
@@ -241,15 +231,12 @@ export default function SearchPage() {
                           containerClassName="w-full"
                           inputClassName="h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                           value={field.value || cityId}
-
-                          defaultValue={cityId}
                         />
                       </FormControl>
                     </FormItem>
                   )}
                 />
 
-                {}
                 <Button type="submit" className="h-10 px-6">
                   <Search className="mr-2 h-4 w-4" />
                   Search

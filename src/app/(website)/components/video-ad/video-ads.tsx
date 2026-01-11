@@ -234,7 +234,6 @@ const PositionAd: React.FC<PositionAdProps> = ({
             <ChevronRight className="h-4 w-4" />
           </Button>
 
-          {}
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex gap-1.5 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
             {randomizedAds.map((_, index) => (
               <button
@@ -289,7 +288,6 @@ const PositionAd: React.FC<PositionAdProps> = ({
               )}
             />
           )}
-          {}
           <div className="absolute top-0 left-0 right-0 flex justify-between items-center px-2 py-1 text-xs text-white font-medium bg-black/60 z-30 rounded-t-md">
             <span className="truncate max-w-[60%]">
               {currentAd.mainCategory?.name}
@@ -318,7 +316,6 @@ const PositionAd: React.FC<PositionAdProps> = ({
           </Zoom>
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-          {}
           <div className="absolute top-0 left-0 right-0 flex justify-between items-center px-2 py-1 text-xs text-white font-medium bg-black/60 z-30 rounded-t-md">
             <span className="truncate max-w-[60%]">
               {currentAd.mainCategory?.name}
@@ -442,7 +439,6 @@ export default function VideoPosterAd({
 
   return (
     <div className=" py-5 flex flex-col md:grid md:grid-cols-12 gap-3 md:gap-5 max-w-[1800px] mx-auto w-full px-2 md:px-4">
-      {}
       <div className="col-span-2 space-y-3">
         <div className="col-span-2 h-[calc(100vh-65px)] min-h-0 grid grid-cols-2 md:grid-cols-1 gap-3 overflow-hidden">
           {[1, 2, 3].map((positionNumber) => (
@@ -466,7 +462,6 @@ export default function VideoPosterAd({
         </div>
       </div>
 
-      {}
       <div className="col-span-8 w-full ">
         {children}
         <PosterAds>
@@ -475,7 +470,6 @@ export default function VideoPosterAd({
         {children}
       </div>
 
-      {}
       <div className="col-span-2 space-y-3">
         <div className="col-span-2 h-[calc(100vh-65px)] min-h-0 grid grid-cols-2 md:grid-cols-1 gap-3 overflow-hidden">
           {[1, 2, 3].map((positionNumber) => (

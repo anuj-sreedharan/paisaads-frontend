@@ -62,7 +62,6 @@ export default function FAQPage() {
   return (
     <div className="pt-20 px-4 pb-12">
       <div className="max-w-4xl mx-auto">
-        {}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <HelpCircle className="h-8 w-8 text-blue-600" />
@@ -77,7 +76,6 @@ export default function FAQPage() {
           )}
         </div>
 
-        {}
         {categories && categories.length > 0 && (
           <div className="mb-8">
             <div className="flex items-center gap-2 mb-4">
@@ -117,7 +115,6 @@ export default function FAQPage() {
           </div>
         )}
 
-        {}
         {filteredQuestions && filteredQuestions.length > 0 ? (
           <Card className="mb-8">
             <CardContent className="pt-6">
@@ -157,7 +154,6 @@ export default function FAQPage() {
           </Card>
         )}
 
-        {}
         {faqData.contactInfo && (
           <Card>
             <CardHeader>

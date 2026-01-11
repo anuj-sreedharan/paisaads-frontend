@@ -215,7 +215,7 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
     const currentImageIds = form.getValues("imageIds");
     const newImageIds = [...currentImageIds];
 
-    newImageIds[index] = undefined;
+    newImageIds[index] = "" as any;
     form.setValue("imageIds", newImageIds.filter(Boolean), {
       shouldValidate: true,
     });
@@ -472,7 +472,6 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
     <div className="w-full max-w-6xl mx-auto px-4 py-4">
       <Form {...form}>
         <form className="space-y-4">
-          {}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             <FormField
               control={form.control}
@@ -571,7 +570,6 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
             />
           </div>
 
-          {}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             <div className="lg:col-span-2">
               <FormField
@@ -650,7 +648,6 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
             </div>
           </div>
 
-          {}
           <div className="mb-6">
             <ColorPicker
               selectedBackgroundColor={form.watch("backgroundColor")}
@@ -663,9 +660,7 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
             />
           </div>
 
-          {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            {}
             <FormField
               control={form.control}
               name="imageIds"
@@ -676,14 +671,12 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
                       <div className="text-xs text-gray-600 px-1">
                         Images (1-3)
                       </div>
-                      {}
                       <div className="text-xs text-gray-500 px-1 mb-2">
                         Recommended: 800x600px, Max 5MB, JPG/PNG format
                       </div>
                       <div className="grid grid-cols-3 gap-2">
                         {[0, 1, 2].map((index) => (
                           <Zoom key={index}>
-                            {}
                             <div className="relative aspect-[4/3] border border-dashed rounded-md overflow-hidden bg-gray-50">
                               {uploadedImages[index] ? (
                                 <>
@@ -726,7 +719,23 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
                                   )}
                                   <input
                                     type="file"
-                                    accept="image}
+                                    accept="image/*"
+                                    className="hidden"
+                                    onChange={(e) => handleImageUpload(e, index)}
+                                    disabled={isUploading}
+                                  />
+                                </label>
+                              )}
+                            </div>
+                          </Zoom>
+                        ))}
+                      </div>
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <div className="space-y-2">
               <div className="text-xs text-gray-600 px-1">Location</div>
               <div className="grid grid-cols-2 gap-2">
@@ -737,28 +746,23 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
                     placeHolder="Select State"
                     containerClassName="country-select-wrapper"
                     inputClassName="country-select-input"
-
-                    defaultValue={ad?.state}
                   />
                 </div>
                 <div className="country-select-container">
                   <CitySelect
                     countryid={INDIA_ID}
-                    stateid={state?.id || ad?.sid}
+                    stateid={state?.id || ad?.sid || 0}
                     onChange={setCity}
                     placeHolder="Select City"
                     disabled={!state && !ad?.sid}
                     containerClassName="country-select-wrapper"
                     inputClassName="country-select-input"
-
-                    defaultValue={ad?.city}
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          {}
           <FormField
             control={form.control}
             name="dates"
@@ -834,7 +838,6 @@ export default function EditLineAdForm({ adId }: EditAdFormProps) {
             )}
           />
 
-          {}
           <div className="hidden">
             <FormField
               control={form.control}

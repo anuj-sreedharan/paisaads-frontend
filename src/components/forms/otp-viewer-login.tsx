@@ -141,7 +141,6 @@ export default function OtpViewerLogin({
     return (
       <div className="space-y-4">
         <div className="text-center">
-          {}
         </div>
 
         <Form {...phoneForm}>

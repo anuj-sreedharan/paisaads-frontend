@@ -90,7 +90,6 @@ export default function PublishedPosterAdsPage() {
         />
       )}
 
-      {}
       <Dialog open={imagesDialogOpen} onOpenChange={setImagesDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>

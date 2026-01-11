@@ -94,7 +94,6 @@ export default function SearchSloganConfig() {
 
   return (
     <div className="space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -111,7 +110,6 @@ export default function SearchSloganConfig() {
             </div>
           ) : (
             <div className="space-y-6">
-              {}
               {currentSlogan && (
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6">
                   <div className="text-center space-y-2">
@@ -130,7 +128,6 @@ export default function SearchSloganConfig() {
                 </div>
               )}
 
-              {}
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="primarySlogan" className="flex items-center gap-2">
@@ -167,7 +164,6 @@ export default function SearchSloganConfig() {
                 </div>
               </div>
 
-              {}
               {showPreview && (
                 <div className="space-y-2">
                   <Label>Preview</Label>
@@ -186,7 +182,6 @@ export default function SearchSloganConfig() {
                 </div>
               )}
 
-              {}
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -213,7 +208,6 @@ export default function SearchSloganConfig() {
                 </div>
               </div>
 
-              {}
               {currentSlogan && (
                 <div className="text-sm text-muted-foreground border-t pt-4">
                   <div className="flex items-center justify-between">

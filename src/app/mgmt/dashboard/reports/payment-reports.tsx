@@ -100,7 +100,6 @@ export function PaymentReports() {
 
   return (
     <div className="space-y-4 md:space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -191,7 +190,6 @@ export function PaymentReports() {
         </CardContent>
       </Card>
 
-      {}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -275,9 +273,7 @@ export function PaymentReports() {
         </Card>
       </div>
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Revenue Timeline</CardTitle>
@@ -306,7 +302,6 @@ export function PaymentReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Revenue by Product Type</CardTitle>
@@ -348,7 +343,6 @@ export function PaymentReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Transaction Volume</CardTitle>
@@ -377,7 +371,6 @@ export function PaymentReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Top Categories by Revenue</CardTitle>
@@ -407,7 +400,6 @@ export function PaymentReports() {
         </Card>
       </div>
 
-      {}
       {revenueByProductData && (
         <Card>
           <CardHeader>
@@ -462,7 +454,6 @@ export function PaymentReports() {
         </Card>
       )}
 
-      {}
       {revenueByCategoryData && (
         <Card>
           <CardHeader>

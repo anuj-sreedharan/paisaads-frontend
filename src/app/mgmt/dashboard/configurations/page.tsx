@@ -25,12 +25,10 @@ export default function ConfigurationsPage() {
 
   return (
     <div className="space-y-6 p-6">
-      {}
       <div className="mb-6">
         <h1 className="text-3xl font-bold tracking-tight mb-2">⚙️ System Configurations</h1>
       </div>
 
-      {}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid w-full grid-cols-7 mb-6">
           <TabsTrigger value="ad-pricing" className="flex items-center gap-2 text-xs">
@@ -63,35 +61,27 @@ export default function ConfigurationsPage() {
           </TabsTrigger>
         </TabsList>
 
-        {}
         <TabsContent value="ad-pricing">
           <AdPricingConfig />
         </TabsContent>
 
-        {}
         <TabsContent value="privacy-policy">
           <PrivacyPolicyConfig />
         </TabsContent>
 
-        {}
         <TabsContent value="search-slogan">
           <SearchSloganConfig />
         </TabsContent>
 
-        {}
-        {}
 
-        {}
         <TabsContent value="faq">
           <FaqConfig />
         </TabsContent>
 
-        {}
         <TabsContent value="contact-page">
           <ContactPageConfig />
         </TabsContent>
 
-        {}
         <TabsContent value="terms-conditions">
           <TermsConditionsConfig />
         </TabsContent>

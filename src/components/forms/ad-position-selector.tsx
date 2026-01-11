@@ -58,7 +58,6 @@ export function AdPositionSelector<T extends Record<string, any>>({
     <div className="w-full space-y-4">
       <h3 className="text-lg font-medium">Ad Position</h3>
       
-      {}
       <FormField
         control={control}
         name={"pageType" as FieldPath<T>}
@@ -85,7 +84,6 @@ export function AdPositionSelector<T extends Record<string, any>>({
         )}
       />
 
-      {}
       {adType !== AdType.LINE && (
         <FormField
           control={control}
@@ -117,7 +115,6 @@ export function AdPositionSelector<T extends Record<string, any>>({
         />
       )}
 
-      {}
       {adType !== AdType.LINE && (
         <FormField
           control={control}

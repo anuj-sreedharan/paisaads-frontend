@@ -24,7 +24,6 @@ export function PosterAdCard({ ad, className }: PosterAdCardProps) {
         className
       )}
     >
-      {}
       <div className="relative h-80 w-full overflow-hidden">
         <Image
           src={imageUrl || "/placeholder.svg"}
@@ -35,7 +34,6 @@ export function PosterAdCard({ ad, className }: PosterAdCardProps) {
         />
       </div>
 
-      {}
       <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center px-4 py-2 text-sm text-white font-semibold bg-black/80 rounded-b-lg">
         <div className="flex flex-wrap gap-x-2 gap-y-1">
           {[ad.mainCategory, ad.categoryOne, ad.categoryTwo, ad.categoryThree]

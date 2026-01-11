@@ -257,10 +257,8 @@ export function PostAdForm() {
     setUploadedImages(newUploadedImages);
 
     const currentImageIds = form.getValues("imageIds");
-    const newImageIds = [...currentImageIds];
-
-    newImageIds[index] = undefined;
-    form.setValue("imageIds", newImageIds.filter(Boolean), {
+    const newImageIds = currentImageIds.filter((_, i) => i !== index);
+    form.setValue("imageIds", newImageIds, {
       shouldValidate: true,
     });
   };
@@ -298,10 +296,8 @@ export function PostAdForm() {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            {}
             <div className="mb-8">
               <div className="flex items-center gap-10">
-                {}
                 <FormField
                   control={form.control}
                   name="mainCategoryId"
@@ -330,7 +326,6 @@ export function PostAdForm() {
                   )}
                 />
 
-                {}
                 {level1Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -360,7 +355,6 @@ export function PostAdForm() {
                   />
                 )}
 
-                {}
                 {level2Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -390,7 +384,6 @@ export function PostAdForm() {
                   />
                 )}
 
-                {}
                 {level3Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -422,7 +415,6 @@ export function PostAdForm() {
               </div>
             </div>
 
-            {}
             <div className="mb-8">
               <FormField
                 control={form.control}
@@ -443,7 +435,6 @@ export function PostAdForm() {
               />
             </div>
 
-            {}
             <div className="mb-8">
               <ColorPicker
                 selectedBackgroundColor={form.watch("backgroundColor")}
@@ -456,7 +447,6 @@ export function PostAdForm() {
               />
             </div>
 
-            {}
             <div className="mb-8">
               <FormField
                 control={form.control}
@@ -465,7 +455,6 @@ export function PostAdForm() {
                   <FormItem>
                     <FormControl>
                       <div className="grid grid-cols-3 gap-4">
-                        {}
                         <div className="relative h-36 border border-gray-300 border-dashed rounded-md overflow-hidden bg-gray-50">
                           {uploadedImages[0] ? (
                             <>
@@ -499,7 +488,14 @@ export function PostAdForm() {
                               )}
                               <input
                                 type="file"
-                                accept="image}
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(e) => handleImageUpload(e, 0)}
+                                disabled={isUploading}
+                              />
+                            </label>
+                          )}
+                        </div>
                         <div className="relative h-36 border border-gray-300 border-dashed rounded-md overflow-hidden bg-gray-50">
                           {uploadedImages[1] ? (
                             <>
@@ -533,7 +529,14 @@ export function PostAdForm() {
                               )}
                               <input
                                 type="file"
-                                accept="image}
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(e) => handleImageUpload(e, 1)}
+                                disabled={isUploading}
+                              />
+                            </label>
+                          )}
+                        </div>
                         <div className="relative h-36 border border-gray-300 border-dashed rounded-md overflow-hidden bg-gray-50">
                           {uploadedImages[2] ? (
                             <>
@@ -567,9 +570,24 @@ export function PostAdForm() {
                               )}
                               <input
                                 type="file"
-                                accept="image}
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(e) => handleImageUpload(e, 2)}
+                                disabled={isUploading}
+                              />
+                            </label>
+                          )}
+                        </div>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-8">
               <div>
-                {}
                 <div className="mb-4">
                   <div className="country-select-container">
                     <StateSelect
@@ -582,7 +600,6 @@ export function PostAdForm() {
                   </div>
                 </div>
 
-                {}
                 <div className="mb-4">
                   <div className="country-select-container">
                     <CitySelect
@@ -597,7 +614,6 @@ export function PostAdForm() {
                   </div>
                 </div>
 
-                {}
                 <div className="hidden">
                   <FormField
                     control={form.control}
@@ -646,7 +662,6 @@ export function PostAdForm() {
                 </div>
               </div>
 
-              {}
               <div>
                 <FormField
                   control={form.control}
@@ -707,6 +722,7 @@ export function PostAdForm() {
                                       acc[monthYear] = [];
                                     }
 
+                                    // @ts-ignore
                                     acc[monthYear].push({ date, dateStr });
                                     return acc;
                                   }, {} as Record<string, { date: Date; dateStr: string }[]>)
@@ -726,7 +742,6 @@ export function PostAdForm() {
                                         {monthYear}
                                       </h5>
                                       <div className="flex flex-wrap gap-2">
-                                        {}
                                         {dates
                                           .sort(
                                             (a, b) =>
@@ -745,7 +760,7 @@ export function PostAdForm() {
                                                 onClick={() => {
                                                   const newDates =
                                                     field.value.filter(
-
+                                                      // @ts-ignore
                                                       (d) => d !== dateStr
                                                     );
                                                   field.onChange(newDates);
@@ -771,9 +786,7 @@ export function PostAdForm() {
               </div>
             </div>
 
-            {}
 
-            {}
             <div className="mb-8">
               <AdPositionSelector
                 control={form.control}
@@ -783,7 +796,6 @@ export function PostAdForm() {
             </div>
 
             <div className="grid grid-cols-2 gap-8 mb-8">
-              {}
               <div className="col-span-1">
                 <FormField
                   control={form.control}
@@ -890,7 +902,7 @@ export function PostAdForm() {
             <div className="flex items-center gap-3">
               <Input
                 onClick={(e) => {
-
+                  // @ts-ignore
                   setIsAgreed(e.target.checked);
                 }}
                 className="size-4"
@@ -914,7 +926,6 @@ export function PostAdForm() {
               </p>
             </div>
 
-            {}
             <div className="pt-6">
               <Button
                 type="submit"

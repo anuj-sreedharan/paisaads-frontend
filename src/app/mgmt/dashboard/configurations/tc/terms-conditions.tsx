@@ -268,7 +268,6 @@ export default function TermsAndConditionsPage() {
             </div>
           ) : (
             <div className="border rounded-md overflow-hidden">
-              {}
               <div className="flex flex-wrap gap-1 p-2 border-b bg-muted/50">
                 <MenuButton
                   icon={Bold}
@@ -415,7 +414,6 @@ export default function TermsAndConditionsPage() {
                 />
               </div>
 
-              {}
               <div className="bg-white">
                 <EditorContent editor={editor} />
               </div>

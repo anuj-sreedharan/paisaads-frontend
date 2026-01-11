@@ -91,7 +91,6 @@ export default function VerifyOtpPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {}
       <div className="flex justify-between items-center p-4 bg-white shadow-sm">
         <h1 className="text-lg font-semibold text-gray-900">Phone Verification</h1>
         <Button
@@ -105,7 +104,6 @@ export default function VerifyOtpPage() {
         </Button>
       </div>
       
-      {}
       <div className="flex items-center justify-center min-h-[calc(100vh-80px)] p-4">
         <PhoneVerification
           phoneNumber={user?.phone_number ?? '0'}

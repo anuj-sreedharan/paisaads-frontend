@@ -89,7 +89,6 @@ export default function Navbar() {
     <header className="w-full sticky top-0 z-50 bg-white/95 backdrop-blur border-b shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
@@ -103,7 +102,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {}
           <nav className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center space-x-8">
               {[
@@ -127,7 +125,6 @@ export default function Navbar() {
             </div>
           </nav>
 
-          {}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -143,7 +140,6 @@ export default function Navbar() {
             </Button>
           </div>
 
-          {}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             {isLoading ? (
 
@@ -186,7 +182,6 @@ export default function Navbar() {
                       Dashboard
                     </Link>
                   </DropdownMenuItem>
-                  {}
                   <DropdownMenuItem asChild>
                     <Link
                       href={
@@ -278,11 +273,9 @@ export default function Navbar() {
           </div>
         </div>
 
-        {}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t bg-white/95 backdrop-blur">
             <div className="px-4 py-4 space-y-2">
-              {}
               <div className="space-y-1">
                 {[
                   { href: "/", label: "Home" },
@@ -305,7 +298,6 @@ export default function Navbar() {
                 ))}
               </div>
 
-              {}
               <div className="pt-4 border-t space-y-2">
                 {isLoading ? (
                   <Button variant="outline" disabled className="w-full gap-2">

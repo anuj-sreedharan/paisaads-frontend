@@ -422,7 +422,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
     <div className="w-full max-w-4xl mx-auto px-3 py-2">
       <Form {...form}>
         <form className="space-y-2">
-          {}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-1.5">
             <FormField
               control={form.control}
@@ -521,7 +520,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             />
           </div>
 
-          {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
             <FormField
               control={form.control}
@@ -550,9 +548,7 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             />
           </div>
 
-          {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
-            {}
             <FormField
               control={form.control}
               name="imageId"
@@ -611,7 +607,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
               )}
             />
 
-            {}
             <div className="space-y-1">
               <div className="text-xs text-gray-600">Location</div>
               <div className="grid grid-cols-2 gap-1.5">
@@ -619,11 +614,9 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
                   <StateSelect
                     countryid={INDIA_ID}
                     onChange={setState}
-                    placeHolder="State"
+                    placeHolder={ad?.state || "State"}
                     containerClassName="country-select-wrapper"
                     inputClassName="country-select-input text-xs h-8"
-
-                    defaultValue={ad?.state}
                   />
                 </div>
                 <div className="country-select-container">
@@ -631,19 +624,16 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
                     countryid={INDIA_ID}
                     stateid={state?.id || ad?.sid}
                     onChange={setCity}
-                    placeHolder="City"
+                    placeHolder={ad?.city || "City"}
                     disabled={!state && !ad?.sid}
                     containerClassName="country-select-wrapper"
                     inputClassName="country-select-input text-xs h-8"
-
-                    defaultValue={ad?.city}
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          {}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
             <FormField
               control={form.control}
@@ -748,7 +738,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             />
           </div>
 
-          {}
           <FormField
             control={form.control}
             name="dates"
@@ -824,7 +813,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             )}
           />
 
-          {}
           <div className="hidden">
             <FormField
               control={form.control}
@@ -872,7 +860,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             />
           </div>
 
-          {}
           {ad?.status === AdStatus.HOLD && !loadingComment && (
             <div className="bg-yellow-100 rounded px-2 py-1.5 border text-xs">
               <div className="flex items-center gap-1">
@@ -885,7 +872,6 @@ export function EditVideoAdForm({ adId }: { adId: string }) {
             </div>
           )}
 
-          {}
           <div className="flex justify-between items-center pt-2 border-t">
             <Button
               type="button"

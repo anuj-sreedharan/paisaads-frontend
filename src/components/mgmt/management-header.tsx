@@ -92,7 +92,6 @@ export function ManagementHeader({
               <User className="mr-2 h-4 w-4" />
               <span>Profile</span>
             </DropdownMenuItem>
-            {}
             <DropdownMenuSeparator />
             <DropdownMenuItem disabled={isLoggingOut} onClick={handleLogout}>
               <LogOut className="mr-2 h-4 w-4" />

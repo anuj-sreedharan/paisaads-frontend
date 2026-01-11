@@ -105,7 +105,6 @@ export function AdminReports() {
 
   return (
     <div className="space-y-4 md:space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -188,7 +187,6 @@ export function AdminReports() {
                   <SelectValue placeholder="All Admins" />
                 </SelectTrigger>
                 <SelectContent>
-                  {}
                   {userWiseData?.map((admin: any) => (
                     <SelectItem key={admin.adminId} value={admin.adminId}>
                       {admin.adminName}
@@ -212,7 +210,6 @@ export function AdminReports() {
         </CardContent>
       </Card>
 
-      {}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -296,9 +293,7 @@ export function AdminReports() {
         </Card>
       </div>
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Admin Activity Timeline</CardTitle>
@@ -329,7 +324,6 @@ export function AdminReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Admin Performance</CardTitle>
@@ -358,7 +352,6 @@ export function AdminReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Activity by Category</CardTitle>
@@ -396,7 +389,6 @@ export function AdminReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Action Type Distribution</CardTitle>
@@ -439,7 +431,6 @@ export function AdminReports() {
         </Card>
       </div>
 
-      {}
       {userWiseData && (
         <Card>
           <CardHeader>

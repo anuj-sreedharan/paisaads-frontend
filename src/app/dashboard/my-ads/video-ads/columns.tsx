@@ -193,7 +193,7 @@ export const columns: ColumnDef<VideoAd>[] = [
     header: "Status",
     cell: ({ row }) => (
 
-      <Badge variant={getStatusVariant(row.original.status)}>
+      <Badge variant={getStatusVariant(row.original.status) as any}>
         {row.original.status}
       </Badge>
     ),

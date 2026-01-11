@@ -49,7 +49,6 @@ const ImageGallery = ({
             loading="lazy"
           />
 
-          {}
           {images.length > 1 && (
             <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
               {currentIndex + 1}/{images.length}
@@ -57,7 +56,6 @@ const ImageGallery = ({
           )}
         </div>
 
-        {}
         {images.length > 1 && (
           <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-1 p-2 bg-gradient-to-t from-black/50 to-transparent">
             {images.map((_, idx) => (
@@ -80,7 +78,6 @@ const ImageGallery = ({
         )}
       </div>
 
-      {}
       <Dialog open={showLightbox} onOpenChange={setShowLightbox}>
         <DialogContent className="max-w-4xl p-0 bg-black border-none">
           <div className="relative">
@@ -230,7 +227,7 @@ const QuickSearchBar = ({
             <CitySelect
               countryid={countryId}
 
-              stateid={stateId || undefined}
+              stateid={stateId ?? 0}
               onChange={(e: any) => {
                 setCityId(e.id);
                 setCityName(e.name);
@@ -269,7 +266,6 @@ const QuickSearchBar = ({
           </Button>
         </div>
 
-        {}
         {(selectedCategories.length > 0 || stateName || cityName) && (
           <div className="flex flex-wrap gap-2 mt-2">
             {selectedCategories.map((catId) => {
@@ -383,8 +379,6 @@ export default function LineAds() {
 
   return (
     <div className="flex-1">
-      {}
-      {}
 
       <div className="py-4">
         {isLoading ? (
@@ -422,7 +416,6 @@ export default function LineAds() {
               ))}
             </div>
 
-            {}
             {isAuthenticated && totalPages > 1 && (
               <div className="flex justify-center items-center gap-2 mt-8">
                 <Button

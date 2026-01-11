@@ -310,7 +310,6 @@ export const columns: ColumnDef<VideoAd>[] = [
               <span className="sr-only">View</span>
             </Link>
           </Button>
-          {}
         </div>
       );
     },

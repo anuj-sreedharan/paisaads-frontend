@@ -111,7 +111,6 @@ export default function ViewLineAd() {
   return (
     <div className="h-screen overflow-auto bg-gray-50">
       <div className="max-w-7xl mx-auto p-4">
-        {}
         <div className="bg-white rounded-lg shadow-sm border mb-4 p-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -156,11 +155,8 @@ export default function ViewLineAd() {
           </div>
         </div>
 
-        {}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 h-[calc(100vh-120px)]">
-          {}
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="bg-gradient-to-r from-blue-50 to-indigo-50 pb-2 px-4">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">
@@ -253,7 +249,6 @@ export default function ViewLineAd() {
               </CardContent>
             </Card>
 
-            {}
             {hasImages && (
               <Card className="shadow-sm border-gray-200">
                 <CardHeader className="bg-gradient-to-r from-green-50 to-emerald-50 pb-2 px-4">
@@ -289,9 +284,7 @@ export default function ViewLineAd() {
             )}
           </div>
 
-          {}
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 pb-2 px-4">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">
@@ -346,7 +339,6 @@ export default function ViewLineAd() {
               </CardContent>
             </Card>
 
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="bg-gradient-to-r from-orange-50 to-red-50 pb-2 px-4">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">
@@ -380,9 +372,7 @@ export default function ViewLineAd() {
             </Card>
           </div>
 
-          {}
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="bg-gradient-to-r from-indigo-50 to-blue-50 pb-2 px-4">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">
@@ -420,7 +410,6 @@ export default function ViewLineAd() {
               </CardContent>
             </Card>
 
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="bg-gradient-to-r from-green-50 to-teal-50 pb-2 px-4">
                 <CardTitle className="flex items-center gap-2 text-sm font-semibold">

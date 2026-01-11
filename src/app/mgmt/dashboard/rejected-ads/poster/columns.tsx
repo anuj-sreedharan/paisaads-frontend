@@ -318,7 +318,6 @@ export const columns: ColumnDef<PosterAd>[] = [
               <span className="sr-only">View</span>
             </Link>
           </Button>
-          {}
         </div>
       );
     },

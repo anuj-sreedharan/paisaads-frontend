@@ -120,7 +120,6 @@ export default function AdPricingConfig() {
 
   return (
     <div className="space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -140,7 +139,6 @@ export default function AdPricingConfig() {
             </div>
           ) : (
             <div className="space-y-6">
-              {}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card className="bg-blue-50 border-blue-200">
                   <CardContent className="pt-4">
@@ -183,7 +181,6 @@ export default function AdPricingConfig() {
                 </Card>
               </div>
 
-              {}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="space-y-2">
@@ -242,7 +239,6 @@ export default function AdPricingConfig() {
                 </div>
               </div>
 
-              {}
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -269,7 +265,6 @@ export default function AdPricingConfig() {
                 </div>
               </div>
 
-              {}
               {currentPricing && (
                 <div className="text-sm text-muted-foreground border-t pt-4">
                   <div className="flex items-center justify-between">
@@ -287,7 +282,6 @@ export default function AdPricingConfig() {
         </CardContent>
       </Card>
 
-      {}
       {showHistory && (
         <Card>
           <CardHeader>

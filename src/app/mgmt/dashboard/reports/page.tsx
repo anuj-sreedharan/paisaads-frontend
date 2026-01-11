@@ -50,7 +50,6 @@ export default function ReportsPage() {
 
   return (
     <div className="space-y-4 md:space-y-6 p-4 md:p-6">
-      {}
       <div className="mb-4 md:mb-6">
         <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">📊 Comprehensive Reports</h1>
         <p className="text-sm md:text-base text-muted-foreground">
@@ -58,7 +57,6 @@ export default function ReportsPage() {
         </p>
       </div>
 
-      {}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 gap-1 md:gap-0 h-auto md:h-10">
           <TabsTrigger value="filtered-ads" className="flex items-center gap-1 md:gap-2 text-xs md:text-sm p-2 md:p-3">
@@ -88,7 +86,6 @@ export default function ReportsPage() {
           </TabsTrigger>
         </TabsList>
 
-        {}
         <TabsContent value="filtered-ads" className="space-y-4 md:space-y-6">
           <Card>
             <CardHeader className="p-4 md:p-6">
@@ -116,22 +113,18 @@ export default function ReportsPage() {
           </Card>
         </TabsContent>
 
-        {}
         <TabsContent value="user-reports" className="space-y-4 md:space-y-6">
           <UserReports />
         </TabsContent>
 
-        {}
         <TabsContent value="admin-reports" className="space-y-4 md:space-y-6">
           <AdminReports />
         </TabsContent>
 
-        {}
         <TabsContent value="listing-reports" className="space-y-4 md:space-y-6">
           <ListingReports />
         </TabsContent>
 
-        {}
         <TabsContent value="payment-reports" className="space-y-4 md:space-y-6">
           <PaymentReports />
         </TabsContent>

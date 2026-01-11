@@ -189,7 +189,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
 
   return (
     <div className="space-y-4 md:space-y-6 p-0">
-      {}
       <Card className="shadow-sm">
         <CardHeader className="p-4 md:p-6">
           <CardTitle className="text-lg md:text-2xl font-bold">Results ({data.total})</CardTitle>
@@ -198,7 +197,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
           </CardDescription>
         </CardHeader>
         <CardContent className="p-0">
-          {}
           <div className="hidden md:block rounded-md border">
             <Table>
               <TableHeader>
@@ -293,7 +291,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
             </Table>
           </div>
 
-          {}
           <div className="md:hidden space-y-4 p-4">
             {data.items.map((ad: any) => {
               const image = getAdImage(ad);
@@ -301,7 +298,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
               return (
                 <Card key={ad.id} className="p-4">
                   <div className="space-y-3">
-                    {}
                     <div className="flex items-center justify-between">
                       <span className="font-medium text-sm">#{ad.sequenceNumber}</span>
                       <Badge variant={getStatusVariant(ad.status) as any} className="text-xs">
@@ -309,7 +305,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
                       </Badge>
                     </div>
 
-                    {}
                     <div className="flex items-start gap-3">
                       {image && (
                         <div className="relative h-16 w-16 overflow-hidden rounded-md flex-shrink-0">
@@ -326,7 +321,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
                       </div>
                     </div>
 
-                    {}
                     <div>
                       <p className="text-sm font-medium">{ad.mainCategory?.name}</p>
                       {(ad.categoryOne?.name || ad.categoryTwo?.name || ad.categoryThree?.name) && (
@@ -338,7 +332,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
                       )}
                     </div>
 
-                    {}
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>
                         <p className="font-medium">Location</p>
@@ -354,7 +347,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
                       </div>
                     </div>
 
-                    {}
                     <div className="flex items-center justify-between">
                       <div className="text-xs text-muted-foreground">
                         {format(new Date(ad.created_at), "MMM dd, yyyy")}
@@ -374,7 +366,6 @@ export function SimpleReportsTable({ filters, currentPage, onPageChange }: Simpl
         </CardContent>
       </Card>
   
-      {}
       {data.totalPages > 1 && (
         <div className="flex flex-col sm:flex-row items-center justify-between mt-4 md:mt-6 gap-2 px-4 md:px-0">
           <Button

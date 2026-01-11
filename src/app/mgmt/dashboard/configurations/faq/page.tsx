@@ -125,7 +125,7 @@ export default function FaqConfig() {
       ...prev,
       [field]: {
 
-        ...prev[field as keyof FaqForm],
+        ...(prev[field as keyof FaqForm] as Record<string, any>),
         [nestedField]: value
       }
     }));
@@ -229,7 +229,6 @@ export default function FaqConfig() {
 
   return (
     <div className="space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -246,7 +245,6 @@ export default function FaqConfig() {
             </div>
           ) : (
             <div className="space-y-8">
-              {}
               <div className="space-y-2">
                 <Label>FAQ Page Introduction</Label>
                 <Textarea
@@ -261,7 +259,6 @@ export default function FaqConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold flex items-center gap-2">
                   <Tag className="h-5 w-5" />
@@ -303,7 +300,6 @@ export default function FaqConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold">Additional Help Contact</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -327,7 +323,6 @@ export default function FaqConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-semibold">FAQ Questions</h3>
@@ -447,7 +442,6 @@ export default function FaqConfig() {
                 </div>
               </div>
 
-              {}
               <div className="flex justify-between items-center pt-6 border-t">
                 <Button
                   variant="outline"
@@ -474,7 +468,6 @@ export default function FaqConfig() {
                 </div>
               </div>
 
-              {}
               {currentFaq && (
                 <div className="text-sm text-muted-foreground border-t pt-4">
                   <div className="flex items-center justify-between">
@@ -492,7 +485,6 @@ export default function FaqConfig() {
         </CardContent>
       </Card>
 
-      {}
       {showPreview && (
         <Card>
           <CardHeader>
@@ -500,7 +492,6 @@ export default function FaqConfig() {
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-              {}
               {formData.introduction && (
                 <div className="text-center">
                   <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -508,14 +499,12 @@ export default function FaqConfig() {
                 </div>
               )}
 
-              {}
               <div className="flex flex-wrap gap-2 justify-center">
                 {formData.categories.map(category => (
                   <Badge key={category} variant="outline">{category}</Badge>
                 ))}
               </div>
 
-              {}
               {formData.categories.map(category => {
                 const categoryQuestions = formData.questions
                   .filter(q => q.category === category && q.isActive)
@@ -538,7 +527,6 @@ export default function FaqConfig() {
                 );
               })}
 
-              {}
               {(formData.contactInfo.email || formData.contactInfo.phone) && (
                 <div className="text-center p-4 bg-muted rounded-lg">
                   <h4 className="font-medium mb-2">Still have questions?</h4>

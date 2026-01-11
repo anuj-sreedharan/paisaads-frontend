@@ -61,7 +61,6 @@ export default function Home() {
 
   return (
     <div className="pt-2 md:pt-5 px-2 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-5">
-      {}
       <div className="hidden md:block md:col-span-2">
         <PosterVideoAdSides
           side="left"
@@ -70,7 +69,6 @@ export default function Home() {
         />
       </div>
 
-      {}
       <div className="col-span-1 md:col-span-8">
         <PosterAdCenterBottom
           topAds={data.centerTopPosterAd}
@@ -82,7 +80,6 @@ export default function Home() {
         </PosterAdCenterBottom>
       </div>
 
-      {}
       <div className="hidden md:block md:col-span-2">
         <PosterVideoAdSides
           side="right"
@@ -91,9 +88,7 @@ export default function Home() {
         />
       </div>
 
-      {}
       <div className="md:hidden col-span-1 space-y-4">
-        {}
         <div className="w-full">
           <h3 className="text-lg font-semibold mb-2 text-center">Featured Ads</h3>
           <PosterVideoAdSides

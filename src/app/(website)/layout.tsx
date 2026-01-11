@@ -74,13 +74,10 @@ export default function RegisterLayout({
     <>
       <Navbar />
       <div className="min-h-screen">{children}</div>
-      {}
 
-      {}
       <footer className="bg-gray-900 text-white py-12 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {}
             <div className="space-y-4">
               <div className="flex items-center">
                 <Image
@@ -122,7 +119,6 @@ export default function RegisterLayout({
               </div>
             </div>
 
-            {}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Quick Links</h3>
               <ul className="space-y-2">
@@ -169,7 +165,6 @@ export default function RegisterLayout({
               </ul>
             </div>
 
-            {}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Support</h3>
               <ul className="space-y-2">
@@ -216,7 +211,6 @@ export default function RegisterLayout({
               </ul>
             </div>
 
-            {}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white">Contact Info</h3>
               {loading ? (
@@ -336,7 +330,7 @@ export default function RegisterLayout({
                               className="text-gray-400 hover:text-white transition-colors text-sm"
                             >
                               {contactInfo.websiteUrl.replace(
-                                /^https?:\/\
+                                /^https?:\/\//,
                                 ""
                               )}
                             </Link>
@@ -350,7 +344,6 @@ export default function RegisterLayout({
             </div>
           </div>
 
-          {}
           <div className="border-t border-gray-800 mt-8 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-center md:text-left">

@@ -85,7 +85,6 @@ export function BasicInfoForm({ user, customer }: BasicInfoFormProps) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
-            {}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <FormLabel>Phone Number</FormLabel>
@@ -158,7 +157,6 @@ export function BasicInfoForm({ user, customer }: BasicInfoFormProps) {
                 </>
               )}
             </div>
-            {}
             <FormField
               control={form.control}
               name="name"

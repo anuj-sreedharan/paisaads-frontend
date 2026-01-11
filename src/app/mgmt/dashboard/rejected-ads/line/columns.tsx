@@ -402,7 +402,6 @@ export const columns: ColumnDef<LineAd>[] = [
               <span className="sr-only">View</span>
             </Link>
           </Button>
-          {}
         </div>
       );
     },

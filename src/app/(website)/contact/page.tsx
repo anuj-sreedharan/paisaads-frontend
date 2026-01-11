@@ -52,7 +52,6 @@ export default function ContactPage() {
   return (
     <div className="pt-20 px-4 pb-12">
       <div className="max-w-6xl mx-auto">
-        {}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -61,7 +60,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {}
           <Card>
             <CardHeader>
               <CardTitle>Primary Contact</CardTitle>
@@ -131,7 +129,6 @@ export default function ContactPage() {
             </CardContent>
           </Card>
 
-          {}
           <Card>
             <CardHeader>
               <CardTitle>Address</CardTitle>
@@ -163,7 +160,6 @@ export default function ContactPage() {
           </Card>
         </div>
 
-        {}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {contactData.supportEmail && (
             <Card>
@@ -221,7 +217,6 @@ export default function ContactPage() {
           )}
         </div>
 
-        {}
         {contactData.businessHours && (
           <Card className="mb-12">
             <CardHeader>
@@ -243,7 +238,6 @@ export default function ContactPage() {
           </Card>
         )}
 
-        {}
         {contactData.socialMediaLinks && contactData.socialMediaLinks.length > 0 && (
           <Card>
             <CardHeader>

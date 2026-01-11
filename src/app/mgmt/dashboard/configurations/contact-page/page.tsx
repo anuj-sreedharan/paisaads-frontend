@@ -182,7 +182,7 @@ export default function ContactPageConfig() {
       ...prev,
       [field]: {
 
-        ...prev[field as keyof ContactPageForm],
+        ...(prev[field as keyof ContactPageForm] as Record<string, any>),
         [nestedField]: value
       }
     }));
@@ -242,7 +242,6 @@ export default function ContactPageConfig() {
 
   return (
     <div className="space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -259,7 +258,6 @@ export default function ContactPageConfig() {
             </div>
           ) : (
             <div className="space-y-8">
-              {}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Building className="h-5 w-5" />
@@ -285,7 +283,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Mail className="h-5 w-5" />
@@ -346,7 +343,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-5 w-5" />
@@ -421,7 +417,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
@@ -441,7 +436,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-4">
                 <div className="flex items-center gap-2 justify-between">
                   <div className="flex items-center gap-2">
@@ -482,7 +476,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               <div className="flex justify-between items-center pt-6 border-t">
                 <Button
                   variant="outline"
@@ -509,7 +502,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               {currentContact && (
                 <div className="text-sm text-muted-foreground border-t pt-4">
                   <div className="flex items-center justify-between">
@@ -527,7 +519,6 @@ export default function ContactPageConfig() {
         </CardContent>
       </Card>
 
-      {}
       {showPreview && (
         <Card>
           <CardHeader>
@@ -535,15 +526,12 @@ export default function ContactPageConfig() {
           </CardHeader>
           <CardContent>
             <div className="space-y-8">
-              {}
               <div className="text-center">
                 <h2 className="text-2xl font-bold mb-2">Contact {formData.companyName}</h2>
                 <p className="text-muted-foreground">Get in touch with us through any of the following methods</p>
               </div>
 
-              {}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {}
                 <Card className="p-4">
                   <div className="flex items-center gap-3">
                     <Mail className="h-6 w-6 text-blue-600" />
@@ -557,7 +545,6 @@ export default function ContactPageConfig() {
                   </div>
                 </Card>
 
-                {}
                 <Card className="p-4">
                   <div className="flex items-center gap-3">
                     <Phone className="h-6 w-6 text-green-600" />
@@ -571,7 +558,6 @@ export default function ContactPageConfig() {
                   </div>
                 </Card>
 
-                {}
                 <Card className="p-4">
                   <div className="flex items-center gap-3">
                     <MapPin className="h-6 w-6 text-red-600" />
@@ -586,7 +572,6 @@ export default function ContactPageConfig() {
                 </Card>
               </div>
 
-              {}
               <div>
                 <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
                   <Clock className="h-5 w-5" />
@@ -602,7 +587,6 @@ export default function ContactPageConfig() {
                 </div>
               </div>
 
-              {}
               {formData.socialMediaLinks.filter(link => link.trim()).length > 0 && (
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Follow Us</h3>

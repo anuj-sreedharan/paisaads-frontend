@@ -513,7 +513,7 @@ export default function EditLineAd() {
       .map((img) => img?.id || "")
       .filter(Boolean);
 
-    const adData = {
+    const adData: Record<string, any> = {
       mainCategoryId,
       categoryOneId: categoryOneId || undefined,
       categoryTwoId: categoryTwoId || undefined,
@@ -621,7 +621,7 @@ export default function EditLineAd() {
         .map((img) => img?.id || "")
         .filter(Boolean);
 
-      const adData = {
+      const adData: Record<string, any> = {
         mainCategoryId,
         categoryOneId: categoryOneId || undefined,
         categoryTwoId: categoryTwoId || undefined,
@@ -744,7 +744,6 @@ export default function EditLineAd() {
   return (
     <div className="flex flex-col bg-gray-50">
       <div className="flex-1 flex flex-col max-w-full mx-auto p-2 md:p-4 overflow-hidden">
-        {}
         <div className="bg-white rounded-lg shadow-sm border mb-2 p-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -769,9 +768,7 @@ export default function EditLineAd() {
           </div>
         </div>
         
-        {}
         <div className="flex-1 grid grid-cols-1 lg:grid-cols-5 gap-2 overflow-hidden">
-          {}
           <div className="lg:col-span-1 space-y-2 overflow-y-auto lg:overflow-hidden">
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="pb-2">
@@ -890,7 +887,6 @@ export default function EditLineAd() {
             </Card>
           </div>
 
-          {}
           <div className="lg:col-span-1 space-y-2 overflow-y-auto lg:overflow-hidden">
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="pb-2">
@@ -908,8 +904,6 @@ export default function EditLineAd() {
                       placeHolder="Select State"
                       containerClassName="country-select-wrapper"
                       inputClassName="country-select-input text-xs h-7"
-
-                      defaultValue={stateValue}
                     />
                   </div>
                 </div>
@@ -925,8 +919,6 @@ export default function EditLineAd() {
                       disabled={!stateId && !ad?.sid}
                       containerClassName="country-select-wrapper"
                       inputClassName="country-select-input text-xs h-7"
-
-                      defaultValue={cityValue}
                     />
                   </div>
                 </div>
@@ -983,7 +975,6 @@ export default function EditLineAd() {
                   </div>
                 </div>
 
-                {}
                 <div className="space-y-1">
                   <Label className="text-xs text-gray-600">Images (Max 3)</Label>
                   <div className="grid grid-cols-3 gap-1">
@@ -1025,7 +1016,20 @@ export default function EditLineAd() {
                             )}
                             <input
                               type="file"
-                              accept="image}
+                              accept="image/*"
+                              className="hidden"
+                              onChange={(e) => handleImageUpload(e, index)}
+                              disabled={isUploading}
+                            />
+                          </label>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           <div className="lg:col-span-1 space-y-2 overflow-y-auto lg:overflow-hidden">
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="pb-2">
@@ -1034,7 +1038,6 @@ export default function EditLineAd() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-2 space-y-2">
-                {}
                 {selectedDates.length > 0 && (
                   <div className="p-1 border rounded-md bg-gray-50 max-h-20 overflow-y-auto">
                     <div className="text-xs font-medium mb-1">
@@ -1090,7 +1093,6 @@ export default function EditLineAd() {
                   </PopoverContent>
                 </Popover>
 
-                {}
                 <div className="space-y-1">
                   <Label className="text-xs text-gray-600">Payment Method</Label>
                   <Select value={paymentMethod} onValueChange={setPaymentMethod}>
@@ -1168,7 +1170,19 @@ export default function EditLineAd() {
                           )}
                           <input
                             type="file"
-                            accept="image}
+                            accept="image/*"
+                            className="hidden"
+                            onChange={handlePaymentProofUpload}
+                            disabled={isUploading}
+                          />
+                        </label>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           <div className="lg:col-span-1 space-y-2 overflow-y-auto lg:overflow-hidden">
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="pb-2">
@@ -1238,7 +1252,6 @@ export default function EditLineAd() {
             </Card>
           </div>
 
-          {}
           <div className="lg:col-span-1 space-y-2 overflow-y-auto lg:overflow-hidden">
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="pb-2">
@@ -1293,7 +1306,6 @@ export default function EditLineAd() {
           </div>
         </div>
         
-        {}
         <div className="flex justify-between items-center mt-4 p-2 bg-white border-t">
           <Button
             variant="outline"

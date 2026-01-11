@@ -107,7 +107,6 @@ export function UserReports() {
 
   return (
     <div className="space-y-4 md:space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -198,7 +197,6 @@ export function UserReports() {
         </CardContent>
       </Card>
 
-      {}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -282,9 +280,7 @@ export function UserReports() {
         </Card>
       </div>
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-        {}
         <Card>
           <CardHeader>
             <CardTitle>User Registration Trends</CardTitle>
@@ -314,7 +310,6 @@ export function UserReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>User Status Distribution</CardTitle>
@@ -355,7 +350,6 @@ export function UserReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>Daily Login Activity</CardTitle>
@@ -385,7 +379,6 @@ export function UserReports() {
           </CardContent>
         </Card>
 
-        {}
         <Card>
           <CardHeader>
             <CardTitle>User Views by Category</CardTitle>
@@ -415,7 +408,6 @@ export function UserReports() {
         </Card>
       </div>
 
-      {}
       {registrationData?.data && (
         <Card>
           <CardHeader>

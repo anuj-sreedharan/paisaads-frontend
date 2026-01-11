@@ -19,7 +19,6 @@ function VideoAdCard({ ad }: { ad: VideoAd }) {
 
   return (
     <div className="relative overflow-hidden rounded-lg shadow-md group w-full aspect-[4/5] md:aspect-[1/1.2]">
-      {}
       <div className="relative h-full w-full overflow-hidden bg-gray-200">
         <video
           key={ad.id}
@@ -39,7 +38,6 @@ function VideoAdCard({ ad }: { ad: VideoAd }) {
           />
         </video>
 
-        {}
         {mainCategory && (
           <div
             className="absolute top-2 right-2 rounded-full px-3 py-1 text-xs font-medium z-10"
@@ -52,7 +50,6 @@ function VideoAdCard({ ad }: { ad: VideoAd }) {
           </div>
         )}
 
-        {}
         {location && (
           <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-black/70 rounded px-2 py-1 text-xs text-white z-10">
             <svg
@@ -85,7 +82,6 @@ function EnhancedPosterAdCard({ ad }: { ad: PosterAd }) {
 
   return (
     <div className="relative overflow-hidden rounded-lg shadow-md group w-full aspect-[4/5] md:aspect-[1/1.2]">
-      {}
       <div className="relative h-full w-full overflow-hidden">
         <img
           key={ad.id}
@@ -98,7 +94,6 @@ function EnhancedPosterAdCard({ ad }: { ad: PosterAd }) {
           }}
         />
 
-        {}
         {mainCategory && (
           <div
             className="absolute top-2 right-2 rounded-full px-3 py-1 text-xs font-medium z-10"
@@ -111,7 +106,6 @@ function EnhancedPosterAdCard({ ad }: { ad: PosterAd }) {
           </div>
         )}
 
-        {}
         {location && (
           <div className="absolute bottom-2 left-2 flex items-center gap-1 bg-black/70 rounded px-2 py-1 text-xs text-white z-10">
             <svg
@@ -150,7 +144,6 @@ function AdCarousel({ ads, positionName }: { ads: Array<{ type: 'video' | 'poste
 
   return (
     <div className="relative w-full">
-      {}
       <div className="w-full">
         {currentAd?.type === "video" ? (
           <VideoAdCard ad={currentAd.ad as VideoAd} />
@@ -159,10 +152,8 @@ function AdCarousel({ ads, positionName }: { ads: Array<{ type: 'video' | 'poste
         )}
       </div>
 
-      {}
       {ads.length > 1 && (
         <>
-          {}
           <button
             onClick={prevAd}
             className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 z-20 transition-colors"
@@ -173,7 +164,6 @@ function AdCarousel({ ads, positionName }: { ads: Array<{ type: 'video' | 'poste
             </svg>
           </button>
 
-          {}
           <button
             onClick={nextAd}
             className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 z-20 transition-colors"
@@ -184,7 +174,6 @@ function AdCarousel({ ads, positionName }: { ads: Array<{ type: 'video' | 'poste
             </svg>
           </button>
 
-          {}
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20">
             {ads.map((_, index) => (
               <button
@@ -265,7 +254,6 @@ export default function PosterVideoAdSides({
 
   return (
     <div className="flex items-center flex-col md:gap-5 gap-3">
-      {}
       <div className="md:hidden w-full overflow-x-auto">
         <div className="flex gap-3 pb-2" style={{ width: `${adsGroupedByPosition.length * 250}px` }}>
           {adsGroupedByPosition.slice(0, 6).map((positionGroup, groupIndex) => (
@@ -279,7 +267,6 @@ export default function PosterVideoAdSides({
         </div>
       </div>
 
-      {}
       <div className="hidden md:flex md:flex-col md:gap-5 md:items-center">
         {adsGroupedByPosition.map((positionGroup, groupIndex) => (
           <div key={`${side}-${positionGroup.position}-${groupIndex}`} className="w-full">

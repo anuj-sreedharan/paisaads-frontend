@@ -52,7 +52,6 @@ const ImageGallery = ({
   return (
     <>
       <div className="relative group h-full w-full">
-        {}
         {images.length > 1 && (
           <button
             type="button"
@@ -69,7 +68,6 @@ const ImageGallery = ({
             <ChevronLeft className="w-4 h-4" />
           </button>
         )}
-        {}
         {images.length > 1 && (
           <button
             type="button"
@@ -97,7 +95,6 @@ const ImageGallery = ({
             loading="lazy"
           />
 
-          {}
           {images.length > 1 && (
             <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
               {currentIndex + 1}/{images.length}
@@ -105,7 +102,6 @@ const ImageGallery = ({
           )}
         </div>
 
-        {}
         {images.length > 1 && (
           <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-3 p-2 bg-gradient-to-t from-black/50 to-transparent">
             {images.map((_, idx) => (
@@ -128,7 +124,6 @@ const ImageGallery = ({
         )}
       </div>
 
-      {}
       <Dialog open={showLightbox} onOpenChange={setShowLightbox}>
         <DialogTitle></DialogTitle>
         <DialogContent className="max-w-4xl p-0 bg-black border-none">
@@ -142,7 +137,6 @@ const ImageGallery = ({
               <X className="h-4 w-4" />
             </Button>
 
-            {}
             {images.length > 1 && (
               <button
                 type="button"
@@ -158,7 +152,6 @@ const ImageGallery = ({
                 <ChevronLeft className="w-6 h-6" />
               </button>
             )}
-            {}
             {images.length > 1 && (
               <button
                 type="button"
@@ -250,12 +243,9 @@ export default function LineAdCard({
             ))}
         </div>
 
-        {}
         <p className={cn("text-sm mb-2 text-justify")}>{ad.content}</p>
 
-        {}
         <div className="space-y-1 pb-2 justify-between items-start">
-          {}
           {(ad.postedBy || ad.contactOne) && (
             <div className="flex items-center text-xs opacity-80">
               <User className="h-3 w-3 mr-1" />
@@ -271,7 +261,6 @@ export default function LineAdCard({
             </div>
           )}
 
-          {}
           <div className="flex items-center text-xs opacity-80">
             <MapPin className="h-3 w-3 mr-1" />
             {ad.city}, {ad.state}
@@ -279,7 +268,6 @@ export default function LineAdCard({
         </div>
       </div>
 
-      {}
       {hasImages && (
         <div className=" w-full h-40">
           <ImageGallery

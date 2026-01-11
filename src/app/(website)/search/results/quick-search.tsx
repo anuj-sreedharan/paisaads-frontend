@@ -125,9 +125,7 @@ export default function QuickSearchBar({
   return (
     <div className={`bg-white border-b shadow-sm ${className}`}>
       <div className="container mx-auto px-4 py-3">
-        {}
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-3 items-end">
-          {}
           <div className="relative">
             <label className="block text-xs font-medium text-gray-600 mb-1">
               Country
@@ -145,12 +143,9 @@ export default function QuickSearchBar({
               placeHolder="Select country"
               containerClassName="w-full"
               inputClassName="w-full h-9 text-sm rounded-md border border-gray-300 px-3 py-1 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-
-              defaultValue={countryId}
             />
           </div>
 
-          {}
           <div className="relative">
             <label className="block text-xs font-medium text-gray-600 mb-1">
               State
@@ -165,14 +160,12 @@ export default function QuickSearchBar({
                 setCityName("");
               }}
 
-              defaultValue={stateId}
               placeHolder="Select state"
               containerClassName="w-full"
               inputClassName="w-full h-9 text-sm rounded-md border border-gray-300 px-3 py-1 bg-white text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
 
-          {}
           <div className="relative">
             <label className="block text-xs font-medium text-gray-600 mb-1">
               City
@@ -182,7 +175,6 @@ export default function QuickSearchBar({
               countryid={countryId}
               stateid={stateId || 0}
 
-              defaultValue={cityId}
               onChange={(e: any) => {
                 setCityId(e.id);
                 setCityName(e.name);
@@ -194,7 +186,6 @@ export default function QuickSearchBar({
             />
           </div>
 
-          {}
           <div className="relative">
             <label className="block text-xs font-medium text-gray-600 mb-1">
               Category
@@ -213,7 +204,6 @@ export default function QuickSearchBar({
             </select>
           </div>
 
-          {}
           <div className="flex gap-2">
             <button
               onClick={handleQuickSearch}
@@ -236,7 +226,6 @@ export default function QuickSearchBar({
           </div>
         </div>
 
-        {}
         {(countryName !== "India" || stateName || cityName || categoryId) && (
           <div className="flex flex-wrap gap-2 mt-3 pt-3 border-t border-gray-100">
             <div className="flex items-center text-xs text-gray-600 mr-2">

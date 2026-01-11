@@ -120,7 +120,6 @@ export const columns: ColumnDef<VideoAd>[] = [
       return (
         <div className="">
           {row.original.position.pageType}
-          {}
         </div>
       );
     },

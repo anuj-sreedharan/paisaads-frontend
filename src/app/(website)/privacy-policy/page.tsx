@@ -45,7 +45,6 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="pt-20 px-4 pb-12">
       <div className="max-w-4xl mx-auto">
-        {}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Shield className="h-8 w-8 text-green-600" />
@@ -58,7 +57,6 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
 
-        {}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           {privacyData.version && (
             <Card>
@@ -107,7 +105,6 @@ export default function PrivacyPolicyPage() {
           )}
         </div>
 
-        {}
         <Card className="mb-8">
           <CardContent className="pt-6">
             {privacyData.content ? (
@@ -124,7 +121,6 @@ export default function PrivacyPolicyPage() {
           </CardContent>
         </Card>
 
-        {}
         <Card className="bg-green-50 border-green-200">
           <CardContent className="pt-6">
             <div className="flex items-start gap-3">
@@ -141,7 +137,6 @@ export default function PrivacyPolicyPage() {
           </CardContent>
         </Card>
 
-        {}
         <Card className="mt-8 bg-gray-50">
           <CardContent className="pt-6">
             <div className="text-center">

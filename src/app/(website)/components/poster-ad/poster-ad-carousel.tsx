@@ -97,16 +97,13 @@ export function PosterAdCarousel({ ads, maxAds = 3 }: PosterAdCarouselProps) {
 
   return (
     <div className="relative w-full overflow-hidden rounded-lg">
-      {}
       <div className="relative">
-        {}
         <div
           className="w-full cursor-zoom-in"
           onClick={() => setModalOpen(true)}
         >
           <PosterAdCard ad={currentAd} className="h-full" />
         </div>
-        {}
         {limitedAds.length > 1 && (
           <>
             <Button
@@ -131,7 +128,6 @@ export function PosterAdCarousel({ ads, maxAds = 3 }: PosterAdCarouselProps) {
           </>
         )}
       </div>
-      {}
       {limitedAds.length > 1 && (
         <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
           {limitedAds.map((_, index) => (
@@ -147,7 +143,6 @@ export function PosterAdCarousel({ ads, maxAds = 3 }: PosterAdCarouselProps) {
           ))}
         </div>
       )}
-      {}
       <Modal
         open={modalOpen}
         onClose={() => setModalOpen(false)}

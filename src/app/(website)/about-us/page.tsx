@@ -7,7 +7,6 @@ import { Building2, Users, Target, Eye, Heart, Shield, Zap, ArrowRight } from "l
 export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-white">
-      {}
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -29,7 +28,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -77,7 +75,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -144,7 +141,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -197,7 +193,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -247,7 +242,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-12 sm:p-16">
@@ -278,7 +272,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {}
       <div className="pb-16"></div>
     </div>
   );

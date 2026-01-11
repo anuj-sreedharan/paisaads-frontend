@@ -182,7 +182,6 @@ export default function PrivacyPolicyConfig() {
 
   return (
     <div className="space-y-6">
-      {}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -201,7 +200,6 @@ export default function PrivacyPolicyConfig() {
             </div>
           ) : (
             <div className="space-y-6">
-              {}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="version">Version</Label>
@@ -223,19 +221,15 @@ export default function PrivacyPolicyConfig() {
                 </div>
               </div>
 
-              {}
               <div className="space-y-2">
                 <Label>Privacy Policy Content</Label>
                 <div className="border rounded-md overflow-hidden">
-                  {}
                   <EditorToolbar editor={editor} />
                   
-                  {}
                   <div className="bg-white min-h-[400px]">
                     <EditorContent editor={editor} />
                   </div>
                   
-                  {}
                   <div className="flex justify-between text-xs text-muted-foreground border-t px-3 py-2">
                     <div>
                       {editor && (
@@ -258,7 +252,6 @@ export default function PrivacyPolicyConfig() {
                 </div>
               </div>
 
-              {}
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -285,7 +278,6 @@ export default function PrivacyPolicyConfig() {
                 </div>
               </div>
 
-              {}
               {currentPolicy && (
                 <div className="text-sm text-muted-foreground border-t pt-4">
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -306,7 +298,6 @@ export default function PrivacyPolicyConfig() {
         </CardContent>
       </Card>
 
-      {}
       {showHistory && (
         <Card>
           <CardHeader>

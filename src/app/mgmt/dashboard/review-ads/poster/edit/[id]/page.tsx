@@ -655,7 +655,6 @@ export default function EditPosterAd() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto p-4 pt-0">
-        {}
         <div className="bg-white rounded-lg shadow-sm border mb-4 p-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -681,11 +680,8 @@ export default function EditPosterAd() {
             </Badge>
           </div>
         </div>
-        {}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
-          {}
           <div className="space-y-3">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -730,7 +726,16 @@ export default function EditPosterAd() {
                       )}
                       <input
                         type="file"
-                        accept="image}
+                        accept="image/*"
+                        className="hidden"
+                        onChange={(e) => handleImageUpload(e, 0)}
+                        disabled={isUploading}
+                      />
+                    </label>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -828,9 +833,7 @@ export default function EditPosterAd() {
             </Card>
           </div>
 
-          {}
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -848,7 +851,6 @@ export default function EditPosterAd() {
                       containerClassName="country-select-wrapper"
                       inputClassName="country-select-input text-sm h-8"
 
-                      defaultValue={stateValue}
                     />
                   </div>
                 </div>
@@ -865,14 +867,12 @@ export default function EditPosterAd() {
                       containerClassName="country-select-wrapper"
                       inputClassName="country-select-input text-sm h-8"
 
-                      defaultValue={cityValue}
                     />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -968,7 +968,6 @@ export default function EditPosterAd() {
                         </SelectContent>
                       </Select>
                     </div>
-                    {}
                     {(side === "LEFT_SIDE" || side === "RIGHT_SIDE") && (
                       <div>
                         <Label className="text-xs text-gray-500">Position Number</Label>
@@ -995,9 +994,7 @@ export default function EditPosterAd() {
             </Card>
           </div>
 
-          {}
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -1077,7 +1074,6 @@ export default function EditPosterAd() {
               </CardContent>
             </Card>
 
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -1169,9 +1165,20 @@ export default function EditPosterAd() {
                           )}
                           <input
                             type="file"
-                            accept="image}
+                            accept="image/*"
+                            className="hidden"
+                            onChange={handlePaymentProofUpload}
+                            disabled={isUploading}
+                          />
+                        </label>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
           <div className="space-y-4">
-            {}
             <Card className="shadow-sm border-gray-200">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -1241,7 +1248,6 @@ export default function EditPosterAd() {
               </CardContent>
             </Card>
 
-            {}
             <Card className="shadow-sm border-gray-200 flex-1">
               <CardHeader className="">
                 <CardTitle className="flex items-center gap-2 text-xs font-medium text-gray-700">
@@ -1297,7 +1303,6 @@ export default function EditPosterAd() {
             </Card>
           </div>
         </div>
-        {}
         <div className="flex justify-between items-center mt-6 pb-6">
           <Button
             variant="outline"

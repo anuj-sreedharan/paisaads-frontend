@@ -229,10 +229,8 @@ export function PostPosterAdForm() {
 
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            {}
             <div className="mb-8">
               <div className="flex items-center gap-10">
-                {}
                 <FormField
                   control={form.control}
                   name="mainCategoryId"
@@ -261,7 +259,6 @@ export function PostPosterAdForm() {
                   )}
                 />
 
-                {}
                 {level1Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -291,7 +288,6 @@ export function PostPosterAdForm() {
                   />
                 )}
 
-                {}
                 {level2Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -321,7 +317,6 @@ export function PostPosterAdForm() {
                   />
                 )}
 
-                {}
                 {level3Categories.length > 0 && (
                   <FormField
                     control={form.control}
@@ -353,7 +348,6 @@ export function PostPosterAdForm() {
               </div>
             </div>
 
-            {}
             <div className="grid grid-cols-3 gap-8 mb-8">
               <div className="mb-8">
                 <FormField
@@ -403,7 +397,22 @@ export function PostPosterAdForm() {
                                 )}
                                 <input
                                   type="file"
-                                  accept="image}
+                                  accept="image/*"
+                                  className="hidden"
+                                  onChange={handleImageUpload}
+                                  disabled={isUploading}
+                                />
+                              </label>
+                            )}
+                          </div>
+                        </div>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className="col-span-2 space-y-3">
                 <div>
                   <AdPositionSelector
                     control={form.control}
@@ -412,9 +421,7 @@ export function PostPosterAdForm() {
                   />
                 </div>
 
-                {}
                 <div>
-                  {}
                   <div className="mb-4">
                     <div className="country-select-container">
                       <StateSelect
@@ -427,7 +434,6 @@ export function PostPosterAdForm() {
                     </div>
                   </div>
 
-                  {}
                   <div className="mb-4">
                     <div className="country-select-container">
                       <CitySelect
@@ -442,7 +448,6 @@ export function PostPosterAdForm() {
                     </div>
                   </div>
 
-                  {}
                   <div className="hidden">
                     <FormField
                       control={form.control}
@@ -491,7 +496,6 @@ export function PostPosterAdForm() {
                   </div>
                 </div>
 
-                {}
                 <div>
                   <div className="col-span-1">
                     <FormField
@@ -534,7 +538,6 @@ export function PostPosterAdForm() {
                   </div>
                 </div>
 
-                {}
                 <div>
                   <FormField
                     control={form.control}
@@ -593,7 +596,7 @@ export function PostPosterAdForm() {
                                       if (!acc[monthYear]) {
                                         acc[monthYear] = [];
                                       }
-
+                                      // @ts-ignore
                                       acc[monthYear].push({ date, dateStr });
                                       return acc;
                                     }, {} as Record<string, { date: Date; dateStr: string }[]>)
@@ -613,7 +616,6 @@ export function PostPosterAdForm() {
                                           {monthYear}
                                         </h5>
                                         <div className="flex flex-wrap gap-2">
-                                          {}
                                           {dates
                                             .sort(
                                               (a, b) =>
@@ -632,7 +634,7 @@ export function PostPosterAdForm() {
                                                   onClick={() => {
                                                     const newDates =
                                                       field.value.filter(
-
+                                                        // @ts-ignore
                                                         (d) => d !== dateStr
                                                       );
                                                     field.onChange(newDates);
@@ -664,7 +666,7 @@ export function PostPosterAdForm() {
             <div className="flex items-center gap-3">
               <Input
                 onClick={(e) => {
-
+                  // @ts-ignore
                   setIsAgreed(e.target.checked);
                 }}
                 className="size-4"
@@ -688,7 +690,6 @@ export function PostPosterAdForm() {
               </p>
             </div>
 
-            {}
             <div className=" pt-6">
               <Button
                 type="submit"

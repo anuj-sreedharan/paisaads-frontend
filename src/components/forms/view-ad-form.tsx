@@ -168,7 +168,6 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
   return (
     <div className="px-2 py-">
       <div className="space-y-3">
-        {}
         <div className="flex items-center justify-between pb-2 border-b">
           <div className="flex items-center gap-2">
             <Button
@@ -188,7 +187,7 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
           {ad.status && (
             <Badge
 
-              variant={getStatusVariant(ad.status)}
+              variant={getStatusVariant(ad.status) as any}
               className="uppercase text-xs px-2 py-1"
             >
               {ad.status === "FOR_REVIEW"
@@ -198,10 +197,8 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
           )}
         </div>
 
-        {}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-3">
           <div className="lg:col-span-2 space-y-3">
-            {}
             <Card className="p-3 border rounded-lg shadow-sm">
               <div className="space-y-3">
                 {content && (
@@ -305,7 +302,6 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
               </div>
             </Card>
 
-            {}
             {isLineAd(ad) && images.length > 0 && (
               <Card className="p-3 border rounded-lg shadow-sm">
                 <div className="space-y-3">
@@ -338,9 +334,7 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
             )}
           </div>
 
-          {}
           <div className="space-y-3">
-            {}
             <Card className="p-3 border rounded-lg shadow-sm">
               <div className="space-y-2">
                 <div className="flex items-center">
@@ -380,7 +374,6 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
               </div>
             </Card>
 
-            {}
             {positionInfo && (
               <Card className="p-3 border rounded-lg shadow-sm">
                 <div className="space-y-2">
@@ -428,7 +421,6 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
               </Card>
             )}
 
-            {}
           </div>
 
           {ad.payment && (
@@ -484,7 +476,6 @@ export function ViewAdForm({ adId, adType }: ViewAdFormProps) {
           )}
         </div>
 
-        {}
         <div className="pt-2 border-t">
           <div className="flex justify-center">
             <Button

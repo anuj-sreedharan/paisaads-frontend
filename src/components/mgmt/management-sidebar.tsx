@@ -182,7 +182,6 @@ export function ManagementSidebar({
 
   return (
     <>
-      {}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"

@@ -91,14 +91,12 @@ export default function ManagementDashboardPage() {
 
   return (
     <div className="space-y-8 p-6">
-      {}
       <div className="space-y-2">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900">
           Dashboard Overview
         </h1>
       </div>
 
-      {}
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-800">Overview</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -128,7 +126,6 @@ export default function ManagementDashboardPage() {
         </div>
       </div>
 
-      {}
       <div className="space-y-4">
         <h2 className="text-xl font-semibold text-gray-800">Ad Types</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -158,7 +155,6 @@ export default function ManagementDashboardPage() {
         </div>
       </div>
 
-      {}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {dashboardStats && (
           <Card className="border-2 border-gray-200 shadow-lg">
@@ -176,7 +172,6 @@ export default function ManagementDashboardPage() {
           </Card>
         )}
 
-        {}
         <Card className="border-2 border-gray-200 shadow-lg">
           <CardHeader className="pb-4">
             <CardTitle className="text-xl font-semibold text-gray-800 flex items-center gap-2">

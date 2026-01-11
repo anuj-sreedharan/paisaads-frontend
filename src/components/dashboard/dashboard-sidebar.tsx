@@ -93,7 +93,6 @@ export default function DashboardSidebar({ pathname }: ManagementSidebarProps) {
 
   const sidebarContent = (
     <nav className="p-4">
-      {}
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-medium">Menu</h2>
         <button
@@ -171,7 +170,6 @@ export default function DashboardSidebar({ pathname }: ManagementSidebarProps) {
 
   return (
     <>
-      {}
       <button
         onClick={() => setIsMobileOpen(true)}
         className="lg:hidden fixed top-3 left-4 z-40 p-2 bg-white rounded-md shadow-md"
@@ -179,7 +177,6 @@ export default function DashboardSidebar({ pathname }: ManagementSidebarProps) {
         <Menu className="h-6 w-6" />
       </button>
 
-      {}
       {isMobileOpen && (
         <div
           className="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50"
@@ -194,7 +191,6 @@ export default function DashboardSidebar({ pathname }: ManagementSidebarProps) {
         </div>
       )}
 
-      {}
       <div className="hidden lg:block w-64 bg-white border-r shadow-sm overflow-y-auto ">
         {sidebarContent}
       </div>
